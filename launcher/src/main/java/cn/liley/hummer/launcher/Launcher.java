@@ -24,6 +24,10 @@ public class Launcher {
 
         try{
             Tomcat tomcat = new Tomcat();
+            tomcat.setBaseDir("web");
+            tomcat.setPort(3411);
+            tomcat.addWebapp("web/conf/context.xml","web");
+            tomcat.enableNaming();
             tomcat.start();
 
         }catch (Exception e){
