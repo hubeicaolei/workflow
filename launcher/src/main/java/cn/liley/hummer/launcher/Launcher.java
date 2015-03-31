@@ -36,7 +36,7 @@ public class Launcher {
 
             tomcat.getHost().setAutoDeploy(true);
 
-            tomcat.addWebapp("/rest","rest.war");
+            tomcat.addWebapp("/rest-api","www/webapps/rest-api.war");
             tomcat.enableNaming();
             tomcat.start();
             tomcat.getServer().await();

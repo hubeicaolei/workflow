@@ -12,6 +12,18 @@
     <artifactId>rest-api</artifactId>
     <packaging>war</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.2</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -20,7 +32,29 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.0.2</version>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.7</version>
+                <configuration></configuration>
+                <executions>
+                    <execution>
+                        <id>copy</id>
+                        <phase>compile</phase>
+                        <configuration>
+                            <target>
+                                <copy tofile="../www/webapps/${artifactId}.war" file="${build.directory}/${build.finalName}.war">
+                                </copy>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
-        <directory>../${tomcat.baseDir}/webapps/</directory>
     </build>
 </project>
