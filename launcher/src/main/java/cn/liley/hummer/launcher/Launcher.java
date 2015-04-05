@@ -19,8 +19,10 @@ public class Launcher {
 
         //start rest api interface
         tomcatStartup();
-        //start command line
+
+        //start message queue
     }
+
 
     private void tomcatStartup() {
 
