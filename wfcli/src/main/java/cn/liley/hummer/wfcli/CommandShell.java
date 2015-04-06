@@ -10,7 +10,7 @@ import java.util.logging.Logger;
  */
 public class CommandShell implements Runnable{
 
-    private Logger logger = Logger.getLogger(this.getClass().getName());
+    private Logger logger = LogManager.getLogger(this.getClass().getName());
     private final String CLASS_NAME = "commandShell";
 
     private final String COMMAND_SIGN ="wfcli>";
@@ -23,6 +23,7 @@ public class CommandShell implements Runnable{
     private final HashMap<String, Command> commands = new HashMap<String, Command>();
 
     public static void main(String[] args){
+
         CommandShell cs = new CommandShell();
         try {
             //init shell console

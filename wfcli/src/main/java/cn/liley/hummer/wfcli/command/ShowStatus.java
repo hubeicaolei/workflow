@@ -1,9 +1,5 @@
 package cn.liley.hummer.wfcli.command;
 
-import cn.liley.hummer.wfcli.Command;
-import org.apache.commons.cli.BasicParser;
-import org.apache.commons.cli.CommandLineParser;
-
 import java.io.Console;
 
 /**

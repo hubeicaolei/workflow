@@ -1,1 +1,1 @@
-java -Djava.ext.dirs=./lib -Dlog4j.configurationFile=./conf/log4j.xml cn.liley.hummer.wfcli.CommandShell
+java -Djava.ext.dirs=./lib -Dlog.configurationFile=./conf/log.properties cn.liley.hummer.wfcli.CommandShell

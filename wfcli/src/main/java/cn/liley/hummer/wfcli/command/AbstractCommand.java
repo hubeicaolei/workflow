@@ -1,6 +1,7 @@
 package cn.liley.hummer.wfcli.command;
 
 import cn.liley.hummer.wfcli.Command;
+import cn.liley.hummer.wfcli.LogManager;
 import org.apache.commons.cli.*;
 
 import java.io.Console;
@@ -13,7 +14,7 @@ import java.util.logging.Logger;
  public  abstract class AbstractCommand implements Command {
 
     protected static String CLASS_NAME = "cn.liley.hummer.wfcli.command.AbstractCommand";
-    protected Logger logger = Logger.getLogger(CLASS_NAME);
+    protected Logger logger = LogManager.getLogger(CLASS_NAME);
 
     protected String name = "AbstractCommand";
     protected String description = "it's a abstract command,don't use it directly.";
