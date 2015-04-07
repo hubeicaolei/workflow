@@ -1,5 +1,7 @@
 package cn.liley.hummer.wfcli;
 
+import cn.liley.hummer.utils.logging.LogManager;
+
 import java.io.*;
 import java.util.*;
 import java.util.logging.Level;

@@ -1,7 +1,8 @@
 package cn.liley.hummer.wfcli.command;
 
+import cn.liley.hummer.utils.logging.LogManager;
 import cn.liley.hummer.wfcli.Command;
-import cn.liley.hummer.wfcli.LogManager;
+
 import org.apache.commons.cli.*;
 
 import java.io.Console;
@@ -31,6 +32,7 @@ import java.util.logging.Logger;
     @Override
     public void addArgs(String[] args){
         String METHOD = "addArgs";
+
         logger.entering(CLASS_NAME,METHOD,args);
         this.args = args;
         CommandLineParser parser = new BasicParser();

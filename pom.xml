@@ -18,6 +18,7 @@
         <module>launcher</module>
         <module>rest-api</module>
         <module>wfcli</module>
+        <module>utils</module>
     </modules>
 <!--
     <build>

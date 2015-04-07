@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hummer-cli</artifactId>
+    <artifactId>wfcli</artifactId>
 
     <dependencies>
         <dependency>
@@ -19,14 +19,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>2.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>2.2</version>
+            <groupId>cn.liley.hummer</groupId>
+            <artifactId>utils</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>

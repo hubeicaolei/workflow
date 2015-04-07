@@ -1,4 +1,4 @@
-package cn.liley.hummer.wfcli;
+package cn.liley.hummer.utils.logging;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -17,12 +17,18 @@ public class LogManager {
         java.util.logging.LogManager logManager = java.util.logging.LogManager.getLogManager();
         try {
             inputStream = new FileInputStream(new File(System.getProperty("log.configurationFile","conf/log.properties")));
-            System.out.println(inputStream);
             logManager.readConfiguration(inputStream);
         } catch (SecurityException e) {
-            System.err.println(e);
+            e.printStackTrace();
         } catch (IOException e) {
-            System.err.println(e);
+            e.printStackTrace();
+        }finally {
+            if(null != inputStream)
+            {
+                try{
+                    inputStream.close();
+                }catch(Exception e){}
+            }
         }
     }
 
