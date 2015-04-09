@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 public class CommandShell implements Runnable{
 
     private Logger logger = LogManager.getLogger(this.getClass().getName());
-    private final String CLASS_NAME = "commandShell";
+    private final String CLASS_NAME = "CommandShell";
 
     private final String COMMAND_SIGN ="wfcli>";
 
