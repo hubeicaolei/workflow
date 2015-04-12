@@ -23,7 +23,7 @@
   version="3.0"
   metadata-complete="true">
 
-  <display-name>rest</display-name>
+  <display-name>rest-api</display-name>
   <description>
      rest
   </description>

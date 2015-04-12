@@ -30,7 +30,7 @@ public class WebServiceManager {
     private String host = "localhost";
     private int port = 3411;
 
-    private String context = "/rest/";
+    private String context = "/rest-api/";
     private String version = "v1";
 
     private final static WebServiceManager instance = new WebServiceManager();
@@ -44,7 +44,7 @@ public class WebServiceManager {
             props.load(inputStream);
             host = props.getProperty("host","localhost");
             port = Integer.parseInt(props.getProperty("port","3411"));
-            context = props.getProperty("context","/rest/");
+            context = props.getProperty("context","/rest-api/");
             version = props.getProperty("version","v1");
 
         } catch (SecurityException e) {
@@ -69,6 +69,9 @@ public class WebServiceManager {
      */
     public  String httpGet(String url) throws IOException {
 
+        String METHOD = "httpGet";
+        logger.entering(CLASS_NAME, METHOD, url);
+
         String httpRequest = "http://" + host + ":" + port + context + version + url;
         HttpGet hg = new HttpGet(httpRequest);
         CloseableHttpClient hc = HttpClients.createDefault();
@@ -85,7 +88,9 @@ public class WebServiceManager {
                 }
             }
         };
-        return hc.execute(hg,rh);
+        String result = hc.execute(hg,rh);
+        logger.exiting(CLASS_NAME,METHOD,result);
+        return result;
     }
 
 

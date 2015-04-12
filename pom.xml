@@ -19,6 +19,7 @@
         <module>rest-api</module>
         <module>wfcli</module>
         <module>utils</module>
+        <module>engine-core</module>
     </modules>
 <!--
     <build>
