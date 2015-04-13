@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  */
  public  abstract class AbstractCommand implements Command {
 
-    protected static String CLASS_NAME = "cn.liley.hummer.wfcli.command.AbstractCommand";
+    protected String CLASS_NAME = "cn.liley.hummer.wfcli.command.AbstractCommand";
     protected Logger logger = LogManager.getLogger(CLASS_NAME);
 
     protected String name = "AbstractCommand";

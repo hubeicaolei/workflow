@@ -62,6 +62,10 @@ public class WebServiceManager {
         }
     }
 
+    public static WebServiceManager getInstance(){
+        return instance;
+    }
+
     /**
      * get resources
      * @param url
