@@ -45,14 +45,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>2.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>2.2</version>
+            <groupId>cn.liley.hummer</groupId>
+            <artifactId>engine-core</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>

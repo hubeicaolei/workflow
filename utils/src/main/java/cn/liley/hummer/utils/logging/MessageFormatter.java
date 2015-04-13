@@ -65,6 +65,6 @@ public class MessageFormatter extends Formatter {
                 }
             }
         }
-        return sb.toString();
+        return sb.toString()+"\n";
     }
 }

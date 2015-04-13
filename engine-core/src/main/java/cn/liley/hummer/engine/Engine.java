@@ -13,6 +13,7 @@ public class Engine {
     Logger logger = LogManager.getLogger(CLASS_NAME);
 
     private static Engine instance = new Engine();
+    private String status = "Inactive";
 
     private Engine() {
         String METHOD = "engine";
@@ -24,6 +25,10 @@ public class Engine {
     }
 
     public String getStatus(){
-        return "Active";
+        return status;
+    }
+
+    public void setStatus(String status){
+        this.status = status;
     }
 }

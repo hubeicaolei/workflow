@@ -1,5 +1,6 @@
 package cn.liley.hummer.launcher;
 
+import cn.liley.hummer.engine.Engine;
 import org.apache.catalina.core.AprLifecycleListener;
 import org.apache.catalina.core.StandardServer;
 import org.apache.catalina.startup.Tomcat;
@@ -16,11 +17,16 @@ public class Launcher {
 
     public void startup(){
         //start workflow engine
+        workflowStartup();
 
         //start rest api interface
         tomcatStartup();
 
         //start message queue
+    }
+
+    private void workflowStartup() {
+        Engine.getInstance().setStatus("Active");
     }
 
 

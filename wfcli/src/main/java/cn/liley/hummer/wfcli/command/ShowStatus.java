@@ -33,18 +33,22 @@ public class ShowStatus extends AbstractCommand {
     public int runCommand(Console console) {
 
         String METHOD = "runCommand";
+        logger.entering(CLASS_NAME,METHOD);
        if (-1 == super.runCommand(console))
            return 0;
 
         //check work flow status;
+        String status = null;
+
         try {
             String json = WebServiceManager.getInstance().httpGet("/system/showstatus");
             Map map = Json.fromJson(HashMap.class, Lang.inr(json));
-            String status = (String)map.get("status");
+            status = (String)map.get("status");
             console.printf("%s",status);
         }catch(Exception e){
-            logger.logp(Level.SEVERE,CLASS_NAME,METHOD,"",e);
+            logger.logp(Level.SEVERE,CLASS_NAME,METHOD,"An exception occurred",e);
         }
+        logger.exiting(CLASS_NAME,METHOD,status);
         return 0;
     }
 

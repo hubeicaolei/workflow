@@ -163,10 +163,12 @@ public class CommandShell implements Runnable{
 
                 command.addArgs(args);
                 if(!command.checkArg()) {
+                    logger.logp(Level.FINEST, CLASS_NAME, METHOD,"has a validation parameter:" + command.getError());
                     console.printf("%s\n", command.getError());
                     showCommandSign();
                     continue;
                 }
+                logger.logp(Level.FINEST,CLASS_NAME,METHOD,"start to run command " + command.getClass().getName());
                 command.runCommand(console);
                 console.printf("\n");
                 showCommandSign();

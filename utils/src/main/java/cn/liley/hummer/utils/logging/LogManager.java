@@ -18,6 +18,7 @@ public class LogManager {
         try {
             inputStream = new FileInputStream(new File(System.getProperty("log.configurationFile","conf/log.properties")));
             logManager.readConfiguration(inputStream);
+
         } catch (SecurityException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -40,6 +41,7 @@ public class LogManager {
      */
     public static Logger getLogger(String clazz) {
         Logger logger = Logger.getLogger(clazz);
+
         return logger;
     }
 }
